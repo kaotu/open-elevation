@@ -31,7 +31,7 @@ KEY_FILE = '%s/cert.key' % CERTS_FOLDER
 """
 Initialize a global interface. This can grow quite large, because it has a cache.
 """
-interface = GDALTileInterface(DATA_FOLDER, '%s/summary.json' % DATA_FOLDER, OPEN_INTERFACES_SIZE)
+interface = GDALTileInterface(DATA_FOLDER, '%ssummary.json' % DATA_FOLDER, OPEN_INTERFACES_SIZE)
 
 if interface.has_summary_json() and not ALWAYS_REBUILD_SUMMARY:
     print('Re-using existing summary JSON')
